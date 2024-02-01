@@ -89,13 +89,13 @@ function addTodo(e) {
     if (inputText == null || inputText == "") {
         showAlert("warning", "Pls, fill in!");
     } else {
-        //Arayüze ekleme
+        //elave etmek
         addTodoToUI(inputText);
         addTodoToStorage(inputText);
         showAlert("success", "Todo was added.");
     }
 
-    //storage ekleme
+    
     e.preventDefault();
 }
 
@@ -148,8 +148,8 @@ function showAlert(type, message) {
     This is a warning alert—check it out!
   </div>*/
     const div = document.createElement("div");
-    //   div.className="alert alert-"+type;
-    div.className = `alert alert-${type}`; //litirel template
+    
+    div.className = `alert alert-${type}`; 
     div.textContent = message;
 
     firstCardBody.appendChild(div);
